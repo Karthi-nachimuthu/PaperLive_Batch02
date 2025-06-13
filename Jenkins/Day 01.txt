@@ -113,6 +113,31 @@ Create a shell file with apache installation commands in any preferred location
 Execute the shell file using the Jenkins job
 Access the default page of apache on browser
 
+appache installations: default port 80
+Started by user Karthi
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/sample
+[sample] $ /bin/sh -xe /tmp/jenkins17674529008545659286.sh
++ sudo sh /home/ec2-user/scripts/appache.sh
+
+To access the file from any directory do this 
+sudo visudo
+last 2 lines above ---> above ##Read drop
+add jenkins ALL=(ALL) NOPASSWD:/bin/* (for all commands or cp or copy command)
+Then stop and start th jenkins server 
+now we can access port 80 for appache
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+sudo: no tty present and no askpass program specified
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
+
 5. Freestyle Project - "This project is parameterized"
 Parameters are used to pass the variables in key-value pairs during the build processs
 
